@@ -7,4 +7,6 @@ export 'src/extension/icons_utils.dart';
 export 'src/extension/num_utils.dart';
 export 'src/extension/print_utils.dart';
 export 'src/extension/string_utils.dart';
+export 'src/widgets/center_widget.dart';
+export 'src/widgets/sized_widgets.dart';
 export 'src/widgets/widget_utils.dart';

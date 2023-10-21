@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ind_utils/ind_utils.dart';
-import 'package:ind_utils/src/widgets/sized_widgets.dart';
+import 'package:ind_utils/src/widgets/widget_utils.dart';
 
 class INDWidgets extends StatelessWidget {
   const INDWidgets({super.key});

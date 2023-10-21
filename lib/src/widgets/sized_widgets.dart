@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-extension INDWedget on Widget{
+extension INDBox on Widget{
   ///  Padding(
   ///  padding:  EdgeInsets.symmetric(vertical: 8.0 , horizontal: 10),
   ///  child: const Text("Welcome"),
