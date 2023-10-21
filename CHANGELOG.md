@@ -1,3 +1,4 @@
-## 0.0.1
+## 0.0.8
 
-* ind_utils package for SizedBox and also Padding. No Need to write long code for this
+* ind_utils package use this package for SizedBox, Padding , Text , Show Toast , Get height and width
+  of Screen.

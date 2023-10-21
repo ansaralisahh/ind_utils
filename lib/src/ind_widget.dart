@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ind_utils/ind_utils.dart';
+import 'package:ind_utils/src/widgets/sized_widgets.dart';
 
 class INDWidgets extends StatelessWidget {
   const INDWidgets({super.key});
@@ -15,6 +16,7 @@ class INDWidgets extends StatelessWidget {
           ///  child: const Text("Welcome"),
           /// )
           /// User Like this
+          Icons.add.icon(),
           const Text("Welcome").pSym(v: 10, h: 20),
 
           /// don't use like this
@@ -23,7 +25,7 @@ class INDWidgets extends StatelessWidget {
           ///        child: Text("Welcome"),
           ///     )
           /// use like this
-          const Text("Welcome").pOnly(b: 10, l: 10, r: 10, t: 10),
+          const Text("Welcome").pO(b: 10, l: 10, r: 10, t: 10),
 
           ///  Don't use like this
           ///   Padding(
@@ -54,8 +56,19 @@ class INDWidgets extends StatelessWidget {
           /// )
           /// Use like this
           50.wBox,
+          /// Text("Welcome").pOnly(b: 10, l: 10, r: 10, t: 10),
+          ///"Get height of Screen ${context.height(v: 1.5)}"
+          ///"Get width of Screen ${context.width(v: 1.5)}"
+          ///"Change Feet to Meter of Any number ${10.fToMeter()}"
+          ///"Change Meter to Feet of Any number ${10.mToFeet()}"
+          ///"Multiple of any value with it self ${10.5.powValue(v: 3)}"
+          ///// Write For only GestureDetector and in this only one function onTap
+          const Text("Welcome").pZ().onTab(() {
+            // context.showMessage(text: "Hello In IndianCreator");
+            // context.goTo(context: context,page: NextPage());
+          })
         ],
       ),
-    );
+    ).safeArea();
   }
 }

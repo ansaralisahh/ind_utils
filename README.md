@@ -1,25 +1,37 @@
-
 # ind_utils
 
-ind_utils package use this package for SizedBox and also Padding. No Need to write long code for these`
+ind_utils package use this package for SizedBox, Padding , Text , Show Toast , Get height and width
+of Screen. No Need to write long code for these`
 
 ## Installation
 
 1. Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
+
 ```yaml
 dependencies:
-  ind_utils: ^0.0.1
+  ind_utils: ^0.0.8
 ```
+
 2. Import the package and use it in your Flutter App.
+
 ```dart
 import 'package:ind_utils/ind_utils.dart';
 ```
 
 ## Example
-Use for SizedBox and Padding Widget
 
--  SizedBox
+Use for SizedBox, Padding , Text , Show Toast , Get height and width
+of Screen. No Need to write long code for these
+
 - Padding
+- Text
+- Go to Next Page
+- Log
+- Show Toast Message
+- Get Height and Width of Screen
+- SizedBox
+- More Widgets
+
 
 <hr>
 
@@ -37,56 +49,53 @@ class INDWidgets extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          /// don't use like this
-          ///  Padding(
-          ///  padding:  EdgeInsets.symmetric(vertical: 8.0 , horizontal: 10),
-          ///  child: const Text("Welcome"),
-          /// )
-          /// User Like this
-          const Text("Welcome").pSym(v: 10, h: 20),
-
-          /// don't use like this
-          ///    Padding(
-          ///        padding: const EdgeInsets.only(left: 8.0 , right: 0 , bottom: 9 , top: 4),
-          ///        child: Text("Welcome"),
-          ///     )
-          /// use like this
-          const Text("Welcome").pOnly(b: 10, l: 10, r: 10, t: 10),
-
-          ///  Don't use like this
-          ///   Padding(
-          /// padding: EdgeInsets.all(10),
-          ///      child: const Text("Welcome"),
-          /// )
-          ///  Use Like This
-          const Text("Welcome").pAll(a: 10),
-
-          ///  Don't use like this
-          ///  Padding(
-          ///  padding: EdgeInsets.zero,
-          ///    child: const Text("Welcome"),
-          /// )
-          /// use like this
-          const Text("Welcome").pZ(),
-
-          /// Don't use like this if you wanna space between two widgets
-          /// SizedBox(
-          ///   height: 50,
-          /// )
-          /// Use like this
-          50.hBox,
-
-          /// Don't use like this if you wanna space between two widgets
-          /// SizedBox(
-          ///   width: 50,
-          /// )
-          /// Use like this
-          50.wBox,
+          const Text("Welcome").pSym(v: 10, h: 20),// Padding EdgeInsets.symmetric
+          const Text("Welcome").mSym(v: 10, h: 20),// Margin EdgeInsets.symmetric
+          const Text("Welcome").pO(b: 10, l: 10, r: 10, t: 10),// Padding EdgeInsets.only
+          const Text("Welcome").mO(b: 10, l: 10, r: 10, t: 10),// Margin EdgeInsets.only
+          const Text("Welcome").pAll(a: 10),// Padding EdgeInsets.all
+          const Text("Welcome").mAll(a: 10),// Margin EdgeInsets.all
+          const Text("Welcome").pZ(),// Padding EdgeInsets.zero
+          const Text("Welcome").pZ().align(),// Align Widget
+          50.hBox,// Give Space with Two Widgets Vertical
+          50.wBox, // Give Space with Two Widgets Horizontal
+          "Center Widget".txt(c: Colors.white, tA: TextAlign.center, fS: 30, fW: FontWeight.bold).center(),// Center Widget
+          "Console Value".txt(fS: 20).onTab(() {
+            var log = Log();
+            log.w("Waning"); // print Waning value
+            log.url("http://indiancreator.in/"); // print url
+            log.e("Please Check Your URL");// print values
+            log.i("Welcome in IndianCreator");// 
+            log.d("Welcome");
+          }),
+          Icons.home_filled.icon(),// build icon Like This
+          Icons.add.iconButton(iS: 20, pressed: () {
+            context.goTo(context: context,page: NextPage());/// Open New Page
+          }), // build iconButton Like This
+          "Show Toast Message".text(fW: FontWeight.bold).onTab(() {
+            context.message(text: "Toast Message");// show Toast Message
+          }),
+          "welcome".text(c: Colors.white).pSym(h: 10, v: 10).card(color: Colors.indigoAccent),// Card Widget
+          "Show Dialog".text(fS: 20).onTab(() {
+            context.dialog(
+                title: "Delete App".text(fS: 30, fW: FontWeight.bold),
+                content: "This is Dialog".text(),
+                actions: [
+                  "Cancel".text().onTab(() {
+                    context.back();// Navigator.pop(context, false); No Need to write This
+                  }),
+                  25.wBox,
+                  "OK".text().onTab(() {
+                    context.back();// Navigator.pop(context, false); No Need to write This
+                  }),
+                ]);/// Show Dialog
+          })
         ],
       ),
     );
   }
 }
+
 ```
 
 </td>
@@ -97,8 +106,4 @@ class INDWidgets extends StatelessWidget {
 
 ## Next Goals
 
-- [x] Add Toast Message.
-
-- [x] We will Explore more widget what ever need every time 
-
-- [ ] Add more ind_utils to the package.
+- [x] We will Explore More Utils
