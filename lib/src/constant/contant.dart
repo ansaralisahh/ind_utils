@@ -38,3 +38,28 @@ class INDConstant {
   static MainAxisSize max =  MainAxisSize.max;
   static MainAxisSize min =  MainAxisSize.min;
 }
+var errorMessage = 'Please try again';
+var errorSomethingWentWrong = 'Something Went Wrong';
+var errorThisFieldRequired = 'This field is required';
+var errorInternetNotAvailable = 'Your internet is not working';
+
+var customDialogHeight = 140.0;
+var customDialogWidth = 220.0;
+
+const currencyRupee = '₹';
+const currencyDollar = '\$';
+const currencyEuro = '€';
+
+const playStoreBaseURL = 'https://play.google.com/store/apps/details?id=';
+const appStoreBaseURL = 'https://apps.apple.com/in/app/';
+const facebookBaseURL = 'https://www.facebook.com/';
+const instagramBaseURL = 'https://www.instagram.com/';
+const linkedinBaseURL = 'https://www.linkedin.com/in/';
+const twitterBaseURL = 'https://twitter.com/';
+const youtubeBaseURL = 'https://www.youtube.com/';
+const redditBaseURL = 'https://reddit.com/r/';
+const telegramBaseURL = 'https://t.me/';
+const facebookMessengerURL = 'https://m.me/';
+const whatsappURL = 'https://wa.me/';
+const googleDriveURL = 'https://docs.google.com/viewer?url=';
+const selectLanCode = 'selected_language_code';

@@ -1,11 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 extension INDString on String {
-  /// This is for Text If You Want Show Text Then
   /// "".text()  Write Like This
-  ///
-  /// Remember If You are Using style Property then don't Use ( fs , c , fW , wS )
-  /// These Field
   Text txt(
       {double fS = 12,
       Color c = CupertinoColors.black,

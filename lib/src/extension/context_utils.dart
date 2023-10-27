@@ -2,28 +2,8 @@ import 'package:flutter/material.dart';
 
 extension Context on BuildContext {
   Size get mediaQuerySize => MediaQuery.of(this).size;
-
-  /// get height of screen
-  /// before we used to write
-  /// MediaQuery.of(this).size.height; Like this
-  /// but now We can write
-  /// context.height Like This and we can get height of screen
-  /// context.height
-  /// context.height
   double get h => mediaQuerySize.height;
-
-  /// get width of screen
-  /// before we used to write
-  /// MediaQuery.of(this).size.width; Like this
-  /// but now We can write
-  /// context.width() Like This and we can get width of screen
-  /// context.width(v:1)
-  /// context.width(v:2)
   double get w => mediaQuerySize.width;
-
-  /// before we used to write
-  /// ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("show message"))); Like This but now
-  /// we can write Like This
   /// context.showMessage(text:"Show Message")
   ScaffoldFeatureController<SnackBar, SnackBarClosedReason> message({
     String text = "",

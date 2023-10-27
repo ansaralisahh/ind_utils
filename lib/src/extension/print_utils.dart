@@ -1,5 +1,5 @@
 class Log {
-  ///logger.w("Warning log");
+  /// Print Value No Need to Install other Package for Print value as a Colour full
   w(Object? text) {
     const int chunkSize = 300;
     final lines = <String>[];
